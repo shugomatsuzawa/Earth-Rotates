@@ -1,10 +1,18 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import Link from "next/link";
+
+import Rotates from './rotates';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
+      <section>
+        <h1><ruby>何時<rp>(</rp><rt>なんじ</rt><rp>)</rp></ruby>？<ruby>何分<rp>(</rp><rt>なんふん</rt><rp>)</rp></ruby>？<ruby>何秒<rp>(</rp><rt>なんびょう</rt><rp>)</rp></ruby>？<br /><ruby>地球<rp>(</rp><rt>ちきゅう</rt><rp>)</rp></ruby>が<ruby>何回<rp>(</rp><rt>なんかい</rt><rp>)</rp></ruby><ruby>回<rp>(</rp><rt>まわ</rt><rp>)</rp></ruby>ったとき？</h1>
+        {/* <Link href='#'>見る</Link> */}
+      </section>
+      <Rotates />
+      {/* <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.js</code>
@@ -89,7 +97,7 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
+      </div> */}
     </main>
   )
 }
