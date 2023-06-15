@@ -18,7 +18,7 @@ body{
 
 @layer base {
   * {
-    @apply italic;
+    @apply italic text-yellow-50;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply text-center font-bold;
@@ -40,5 +40,14 @@ body{
   }
   h6 {
     @apply text-lg;
+  }
+  ul {
+    @apply list-disc list-inside;
+  }
+  ol {
+    @apply list-decimal list-inside;
+  }
+  a {
+    @apply text-orange-500 focus-visible:outline outline-2 outline-offset-1 outline-orange-500 hover:underline;
   }
 }
