@@ -9,16 +9,12 @@
   }
 /* } */
 
-body{
-  background-image: url(/earth-night-1918.gif);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #000;
-}
-
 @layer base {
   * {
     @apply italic text-yellow-50;
+  }
+  body {
+    @apply bg-slate-900
   }
   h1, h2, h3, h4, h5, h6 {
     @apply text-center font-bold;
