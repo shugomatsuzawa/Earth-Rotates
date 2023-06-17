@@ -11,7 +11,7 @@ const Earth = () => {
     <>
       <Script src="https://www.webglearth.com/v2/api.js" />
       <Script src="/webglearth.js" onLoad={() => { initialize() }} />
-      <div id="earth_div" className='!fixed inset-0 -z-10 mix-blend-lighten opacity-80'></div>
+      <div id="earth_div" className='!fixed inset-0 -z-10 mix-blend-lighten opacity-70'></div>
     </>
   );
 };

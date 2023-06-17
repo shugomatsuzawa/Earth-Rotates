@@ -39,14 +39,14 @@ function initialize() {
     const windowHeight = mainScroll.clientHeight;
     if (scroll < windowHeight){
       const zoomParam = 2 + scroll / windowHeight * 2;
-      const tiltParam = scroll / windowHeight * 36;
+      const tiltParam = scroll / windowHeight * 30;
       earth.setZoom(zoomParam);
       earth.setTilt(tiltParam);
       // earth.setRoll(25);
       // console.debug('zoom' + zoomParam + 'tilt' + tiltParam);
     } else {
       earth.setZoom(4);
-      earth.setTilt(36);
+      earth.setTilt(30);
       // earth.setRoll(25);
     }
   });

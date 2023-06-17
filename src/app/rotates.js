@@ -8,7 +8,7 @@ import { parseISO, format } from 'date-fns';
 const Rotates = () => {
   // https://ordix.hatenablog.jp/entry/2016/06/09/201057
   // 2022年1月で45.43億年と仮定 ("The age of the Earth" by J. A. Jacobsen et al., Nature, 593, 202 (2021). ?)
-  // 800.2055*4,543,080,000=3,635,397,602,940
+  // 800.2055*4,543,000,000=3,635,333,586,500
   const [dateDisplay, setDateDisplay] = useState('');
   const [timeDisplay, setTimeDisplay] = useState('');
   const [tzDisplay, setTzDisplay] = useState('');
@@ -34,15 +34,15 @@ const Rotates = () => {
 
       if (now >= distDate) {
         setClockError(false);
-        const rotates = 3635397602940 + (now - distDate) / 86400000;
+        const rotates = 3635333586500 + (now - distDate) / 86400000;
         console.debug(rotates);
 
         const integer = String(rotates).split(".")[0];
-        const n = <span className='text-7xl'>{integer.slice( -4 )}</span>;
-        const k = integer.slice( -8, -4 ) ? [<><span className='text-7xl'>{integer.slice( -8, -4 )}</span><ruby>万<rp>(</rp><rt>まん</rt><rp>)</rp></ruby><br /></>] : null;
-        const m = integer.slice( -12, -8 ) ? [<><span className='text-7xl'>{integer.slice( -12, -8 )}</span><ruby>億<rp>(</rp><rt>おく</rt><rp>)</rp></ruby><br /></>] : null;
-        const g = integer.slice( -16, -12 ) ? [<><span className='text-7xl'>{integer.slice( -16, -12 )}</span><ruby>兆<rp>(</rp><rt>ちょう</rt><rp>)</rp></ruby><br /></>] : null;
-        const decimal = String(rotates).split(".")[1] ? [<><ruby>.<rp>(</rp><rt>(てん)</rt><rp>)</rp></ruby><br /><span className='text-7xl'>{String(rotates).split(".")[1]}</span><ruby>回<rp>(</rp><rt>かい</rt><rp>)</rp></ruby></>] : <ruby>回<rp>(</rp><rt>かい</rt><rp>)</rp></ruby>;
+        const n = <span><span className='text-7xl'>{integer.slice( -4 )}</span> {String(rotates).split(".")[1] ? <ruby>.<rp>(</rp><rt>(てん)</rt><rp>)</rp></ruby> : <ruby>回<rp>(</rp><rt>かい</rt><rp>)</rp></ruby>} </span>;
+        const k = integer.slice( -8, -4 ) ? [<span><span className='text-7xl'>{integer.slice( -8, -4 )}</span> <ruby>万<rp>(</rp><rt>まん</rt><rp>)</rp></ruby> </span>] : null;
+        const m = integer.slice( -12, -8 ) ? [<span><span className='text-7xl'>{integer.slice( -12, -8 )}</span> <ruby>億<rp>(</rp><rt>おく</rt><rp>)</rp></ruby> </span>] : null;
+        const g = integer.slice( -16, -12 ) ? [<span><span className='text-7xl'>{integer.slice( -16, -12 )}</span> <ruby>兆<rp>(</rp><rt>ちょう</rt><rp>)</rp></ruby> </span>] : null;
+        const decimal = String(rotates).split(".")[1] ? [<span><span className='text-7xl'>{String(rotates).split(".")[1]}</span> <ruby>回<rp>(</rp><rt>かい</rt><rp>)</rp></ruby> </span>] : null;
         setRotatesDisplay([g, m, k, n, decimal]);
       } else {
         setClockError(true);
