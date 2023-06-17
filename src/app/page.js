@@ -3,6 +3,9 @@ import styles from './page.module.css'
 import Link from "next/link";
 import Script from 'next/script'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowDown, faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons'
+
 import Rotates from './rotates';
 import Earth from './earth';
 
@@ -14,7 +17,8 @@ export default function Home() {
         <section className='container p-10 h-[100dvh] snap-start grid place-content-center'>
           <h1 className='leading-loose'><span className='inline-block'><ruby>何時<rp>(</rp><rt>なんじ</rt><rp>)</rp></ruby>？</span><span className='inline-block'><ruby>何分<rp>(</rp><rt>なんふん</rt><rp>)</rp></ruby>？</span><span className='inline-block'><ruby>何秒<rp>(</rp><rt>なんびょう</rt><rp>)</rp></ruby>？</span><br />
           <span className='inline-block'><ruby>地球<rp>(</rp><rt>ちきゅう</rt><rp>)</rp></ruby>が</span><span className='inline-block'><ruby>何回<rp>(</rp><rt>なんかい</rt><rp>)</rp></ruby></span><span className='inline-block'><ruby>回<rp>(</rp><rt>まわ</rt><rp>)</rp></ruby>った</span><span className='inline-block'>とき？</span></h1>
-          <p className='mt-4 text-center'><ruby>地球<rp>(</rp><rt>ちきゅう</rt><rp>)</rp></ruby>が<ruby>何回<rp>(</rp><rt>なんかい</rt><rp>)</rp></ruby><ruby>回<rp>(</rp><rt>まわ</rt><rp>)</rp></ruby>ったのかがわかるサイト</p>
+          <p className='mt-2 text-center'><ruby>地球<rp>(</rp><rt>ちきゅう</rt><rp>)</rp></ruby>が<ruby>何回<rp>(</rp><rt>なんかい</rt><rp>)</rp></ruby><ruby>回<rp>(</rp><rt>まわ</rt><rp>)</rp></ruby>ったのかがわかるサイト</p>
+          <p className='mt-10 text-center'><FontAwesomeIcon icon={faArrowDown} bounce size="2xl" /><br /><span className='text-xs not-italic'>スクロールして<ruby>見<rp>(</rp><rt>み</rt><rp>)</rp></ruby>る</span></p>
         </section>
         <section className='container p-10 h-[100dvh] snap-start grid place-content-center'>
           <Rotates />
@@ -34,12 +38,12 @@ export default function Home() {
               <p className='mt-2.5'>ここから現在までの日数を足したものが、地球が回った回数です。</p>
               <h6 className='mt-10 text-start'>出典</h6>
               <ol>
-                <li><Link href='https://ordix.hatenablog.jp/entry/2016/06/09/201057' target='_blank'>「何時何分何秒地球が何回回ったとき」　問題を真剣に考えてみた - 天気晴朗なれども奈美高志くん</Link></li>
-                <li><Link href='https://english-otter.com/2018/01/12/the-earth/' target='_blank'>【論破用】「何時何分何秒地球が何回回ったとき」を計算してみた 【積分】 | カワウソは考える。</Link></li>
+                <li><Link href='https://ordix.hatenablog.jp/entry/2016/06/09/201057' target='_blank'>「何時何分何秒地球が何回回ったとき」　問題を真剣に考えてみた - 天気晴朗なれども奈美高志くん <FontAwesomeIcon icon={faSquareArrowUpRight} size="sm" /></Link></li>
+                <li><Link href='https://english-otter.com/2018/01/12/the-earth/' target='_blank'>【論破用】「何時何分何秒地球が何回回ったとき」を計算してみた 【積分】 | カワウソは考える。 <FontAwesomeIcon icon={faSquareArrowUpRight} size="sm" /></Link></li>
               </ol>
             </div>
           </div>
-          <aside className='mt-5 text-center not-italic'><Link href='https://shugomatsuzawa.com' target='_blank' className='not-italic'>このサイトを作った人</Link> | <small>©︎ Shugo Matsuzawa 2023</small></aside>
+          <aside className='mt-5 text-center not-italic'><Link href='https://shugomatsuzawa.com' target='_blank' className='not-italic'>このサイトを作った人 <FontAwesomeIcon icon={faSquareArrowUpRight} size="sm" /></Link> | <small>©︎ Shugo Matsuzawa 2023</small></aside>
         </section>
       </main>
     </>

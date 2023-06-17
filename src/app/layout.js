@@ -1,7 +1,10 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-
 const inter = Inter({ subsets: ['latin'] })
+
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
 
 export const metadata = {
   title: '地球が何回回った時？',
