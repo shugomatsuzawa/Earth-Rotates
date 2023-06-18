@@ -17,8 +17,8 @@ export default function Home() {
         <section className='container p-10 h-[100dvh] snap-start grid place-content-center'>
           <h1 className='leading-loose'><span className='inline-block'><ruby>何時<rp>(</rp><rt>なんじ</rt><rp>)</rp></ruby>？</span><span className='inline-block'><ruby>何分<rp>(</rp><rt>なんふん</rt><rp>)</rp></ruby>？</span><span className='inline-block'><ruby>何秒<rp>(</rp><rt>なんびょう</rt><rp>)</rp></ruby>？</span><br />
           <span className='inline-block'><ruby>地球<rp>(</rp><rt>ちきゅう</rt><rp>)</rp></ruby>が</span><span className='inline-block'><ruby>何回<rp>(</rp><rt>なんかい</rt><rp>)</rp></ruby></span><span className='inline-block'><ruby>回<rp>(</rp><rt>まわ</rt><rp>)</rp></ruby>った</span><span className='inline-block'>とき？</span></h1>
-          <p className='mt-2 text-center'><ruby>地球<rp>(</rp><rt>ちきゅう</rt><rp>)</rp></ruby>が<ruby>何回<rp>(</rp><rt>なんかい</rt><rp>)</rp></ruby><ruby>回<rp>(</rp><rt>まわ</rt><rp>)</rp></ruby>ったのかがわかるサイト</p>
-          <p className='mt-10 text-center'><FontAwesomeIcon icon={faArrowDown} bounce size="2xl" /><br /><span className='text-xs not-italic'>スクロールして<ruby>見<rp>(</rp><rt>み</rt><rp>)</rp></ruby>る</span></p>
+          <p className='mt-2 text-center font-bold border-y border-yellow-50'><ruby>地球<rp>(</rp><rt>ちきゅう</rt><rp>)</rp></ruby>が<ruby>何回<rp>(</rp><rt>なんかい</rt><rp>)</rp></ruby><ruby>回<rp>(</rp><rt>まわ</rt><rp>)</rp></ruby>ったのかがわかるサイト</p>
+          <p className='mt-10 text-center'><FontAwesomeIcon icon={faArrowDown} bounce size="2xl" /><br /><small className='text-xs'>スクロールして<ruby>見<rp>(</rp><rt>み</rt><rp>)</rp></ruby>る</small></p>
         </section>
         <section className='container p-10 h-[100dvh] snap-start grid place-content-center'>
           <Rotates />
@@ -43,7 +43,14 @@ export default function Home() {
               </ol>
             </div>
           </div>
-          <aside className='mt-5 text-center not-italic'><Link href='https://shugomatsuzawa.com' target='_blank' className='not-italic'>このサイトを作った人 <FontAwesomeIcon icon={faSquareArrowUpRight} size="sm" /></Link> | <small>©︎ Shugo Matsuzawa 2023</small></aside>
+          <aside className='mt-5 text-center not-italic'>
+            <ul>
+              <li className='inline-block mx-2'><Link href='https://shugomatsuzawa.com' target='_blank' className='not-italic'>このサイトを<ruby>作<rp>(</rp><rt>つく</rt><rp>)</rp></ruby>った<ruby>人<rp>(</rp><rt>ひと</rt><rp>)</rp></ruby> <FontAwesomeIcon icon={faSquareArrowUpRight} size="sm" /></Link></li>
+              <li className='inline-block mx-2'><Link href='https://shugomatsuzawa.com/privacy/' target='_blank' className='not-italic'>プライバシーポリシー <FontAwesomeIcon icon={faSquareArrowUpRight} size="sm" /></Link></li>
+              {/* <li className='inline-block mx-2'><Link href='#' target='_blank' className='not-italic'>謝辞</Link></li> */}
+            </ul>
+            <small className='block mt-2'>©︎ Shugo Matsuzawa 2023</small>
+          </aside>
         </section>
       </main>
     </>

@@ -1,7 +1,8 @@
 var earth;
 
 function initialize() {
-// window.onload = function() {
+  const reducedMotion = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+
   var earth = new WE.map('earth_div', {
     atmosphere: true,
     sky: true,
@@ -21,6 +22,7 @@ function initialize() {
   // Start a simple rotation animation
   var before = null;
   requestAnimationFrame(function animate(now) {
+    if (!reducedMotion) {
       var tilt = earth.getTilt();
       // var roll = earth.getRoll();
       var c = earth.getPosition();
@@ -30,6 +32,7 @@ function initialize() {
       earth.setTilt(tilt);
       // earth.setRoll(roll);
       requestAnimationFrame(animate);
+    }
   });
 
   // スクロール移動
@@ -37,14 +40,14 @@ function initialize() {
   mainScroll.addEventListener('scroll', function(){
     const scroll = mainScroll.scrollTop;
     const windowHeight = mainScroll.clientHeight;
-    if (scroll < windowHeight){
+    if (!reducedMotion && scroll < windowHeight){
       const zoomParam = 2 + scroll / windowHeight * 2;
       const tiltParam = scroll / windowHeight * 30;
       earth.setZoom(zoomParam);
       earth.setTilt(tiltParam);
       // earth.setRoll(25);
       // console.debug('zoom' + zoomParam + 'tilt' + tiltParam);
-    } else {
+    } else if (!reducedMotion) {
       earth.setZoom(4);
       earth.setTilt(30);
       // earth.setRoll(25);

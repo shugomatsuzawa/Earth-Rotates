@@ -38,11 +38,11 @@ const Rotates = () => {
         console.debug(rotates);
 
         const integer = String(rotates).split(".")[0];
-        const n = <span><span className='text-7xl'>{integer.slice( -4 )}</span> {String(rotates).split(".")[1] ? <ruby>.<rp>(</rp><rt>(てん)</rt><rp>)</rp></ruby> : <ruby>回<rp>(</rp><rt>かい</rt><rp>)</rp></ruby>} </span>;
-        const k = integer.slice( -8, -4 ) ? [<span><span className='text-7xl'>{integer.slice( -8, -4 )}</span> <ruby>万<rp>(</rp><rt>まん</rt><rp>)</rp></ruby> </span>] : null;
-        const m = integer.slice( -12, -8 ) ? [<span><span className='text-7xl'>{integer.slice( -12, -8 )}</span> <ruby>億<rp>(</rp><rt>おく</rt><rp>)</rp></ruby> </span>] : null;
-        const g = integer.slice( -16, -12 ) ? [<span><span className='text-7xl'>{integer.slice( -16, -12 )}</span> <ruby>兆<rp>(</rp><rt>ちょう</rt><rp>)</rp></ruby> </span>] : null;
-        const decimal = String(rotates).split(".")[1] ? [<span><span className='text-7xl'>{String(rotates).split(".")[1]}</span> <ruby>回<rp>(</rp><rt>かい</rt><rp>)</rp></ruby> </span>] : null;
+        const n = <span className='inline-block'><span className='text-7xl'>{integer.slice( -4 )}</span> {String(rotates).split(".")[1] ? <ruby>.<rp>(</rp><rt>(てん)</rt><rp>)</rp></ruby> : <ruby>回<rp>(</rp><rt>かい</rt><rp>)</rp></ruby>} </span>;
+        const k = integer.slice( -8, -4 ) ? [<span className='inline-block'><span className='text-7xl'>{integer.slice( -8, -4 )}</span> <ruby>万<rp>(</rp><rt>まん</rt><rp>)</rp></ruby> </span>] : null;
+        const m = integer.slice( -12, -8 ) ? [<span className='inline-block'><span className='text-7xl'>{integer.slice( -12, -8 )}</span> <ruby>億<rp>(</rp><rt>おく</rt><rp>)</rp></ruby> </span>] : null;
+        const g = integer.slice( -16, -12 ) ? [<span className='inline-block'><span className='text-7xl'>{integer.slice( -16, -12 )}</span> <ruby>兆<rp>(</rp><rt>ちょう</rt><rp>)</rp></ruby> </span>] : null;
+        const decimal = String(rotates).split(".")[1] ? [<span className='inline-block'><span className='text-7xl'>{String(rotates).split(".")[1]}</span> <ruby>回<rp>(</rp><rt>かい</rt><rp>)</rp></ruby> </span>] : null;
         setRotatesDisplay([g, m, k, n, decimal]);
       } else {
         setClockError(true);
