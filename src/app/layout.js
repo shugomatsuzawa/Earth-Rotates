@@ -1,6 +1,8 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
-const inter = Inter({ subsets: ['latin'] })
+
+// import "@fontsource-variable/noto-sans-jp/wght.css";
+import "@fontsource/noto-sans-jp/400.css";
+import "@fontsource/noto-sans-jp/800.css";
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -21,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ja" className="dark">
-    <body className={inter.className}>{children}</body>
+    <body>{children}</body>
     </html>
   )
 }

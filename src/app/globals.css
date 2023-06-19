@@ -4,7 +4,7 @@
 
 @layer base {
   *:not(ruby, rt, rp) {
-    @apply italic text-yellow-50;
+    @apply text-yellow-50;
   }
   rt {
     @apply font-normal;
@@ -43,41 +43,13 @@
     @apply text-orange-500 contrast-more:text-orange-300 focus-visible:outline outline-2 outline-offset-1 outline-orange-500 contrast-more:outline-orange-300 hover:underline;
   }
   small {
-    @apply not-italic text-slate-300 contrast-more:text-neutral-50 font-normal;
+    @apply text-slate-300 contrast-more:text-neutral-50 font-normal;
+  }
+  .font-bold {
+    @apply font-extrabold;
   }
 
-  /* .container-sa-0 {padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);}
-  .container-sa-0\.5 {padding: calc(env(safe-area-inset-top) + theme(spacing[0.5])) calc(env(safe-area-inset-right) + theme(spacing[0.5])) calc(env(safe-area-inset-bottom) + theme(spacing[0.5])) calc(env(safe-area-inset-left) + theme(spacing[0.5]));}
-  .container-sa-1 {padding: calc(env(safe-area-inset-top) + theme(spacing.1)) calc(env(safe-area-inset-right) + theme(spacing.1)) calc(env(safe-area-inset-bottom) + theme(spacing.1)) calc(env(safe-area-inset-left) + theme(spacing.1));}
-  .container-sa-1\.5 {padding: calc(env(safe-area-inset-top) + theme(spacing[1.5])) calc(env(safe-area-inset-right) + theme(spacing[1.5])) calc(env(safe-area-inset-bottom) + theme(spacing[1.5])) calc(env(safe-area-inset-left) + theme(spacing[1.5]));}
-  .container-sa-2 {padding: calc(env(safe-area-inset-top) + theme(spacing.2)) calc(env(safe-area-inset-right) + theme(spacing.2)) calc(env(safe-area-inset-bottom) + theme(spacing.2)) calc(env(safe-area-inset-left) + theme(spacing.2));}
-  .container-sa-2\.5 {padding: calc(env(safe-area-inset-top) + theme(spacing[2.5])) calc(env(safe-area-inset-right) + theme(spacing[2.5])) calc(env(safe-area-inset-bottom) + theme(spacing[2.5])) calc(env(safe-area-inset-left) + theme(spacing[2.5]));}
-  .container-sa-3 {padding: calc(env(safe-area-inset-top) + theme(spacing.3)) calc(env(safe-area-inset-right) + theme(spacing.3)) calc(env(safe-area-inset-bottom) + theme(spacing.3)) calc(env(safe-area-inset-left) + theme(spacing.3));}
-  .container-sa-3\.5 {padding: calc(env(safe-area-inset-top) + theme(spacing[3.5])) calc(env(safe-area-inset-right) + theme(spacing[3.5])) calc(env(safe-area-inset-bottom) + theme(spacing[3.5])) calc(env(safe-area-inset-left) + theme(spacing[3.5]));}
-  .container-sa-4 {padding: calc(env(safe-area-inset-top) + theme(spacing.4)) calc(env(safe-area-inset-right) + theme(spacing.4)) calc(env(safe-area-inset-bottom) + theme(spacing.4)) calc(env(safe-area-inset-left) + theme(spacing.4));}
-  .container-sa-5 {padding: calc(env(safe-area-inset-top) + theme(spacing.5)) calc(env(safe-area-inset-right) + theme(spacing.5)) calc(env(safe-area-inset-bottom) + theme(spacing.5)) calc(env(safe-area-inset-left) + theme(spacing.5));}
-  .container-sa-6 {padding: calc(env(safe-area-inset-top) + theme(spacing.6)) calc(env(safe-area-inset-right) + theme(spacing.6)) calc(env(safe-area-inset-bottom) + theme(spacing.6)) calc(env(safe-area-inset-left) + theme(spacing.6));}
-  .container-sa-7 {padding: calc(env(safe-area-inset-top) + theme(spacing.7)) calc(env(safe-area-inset-right) + theme(spacing.7)) calc(env(safe-area-inset-bottom) + theme(spacing.7)) calc(env(safe-area-inset-left) + theme(spacing.7));}
-  .container-sa-8 {padding: calc(env(safe-area-inset-top) + theme(spacing.8)) calc(env(safe-area-inset-right) + theme(spacing.8)) calc(env(safe-area-inset-bottom) + theme(spacing.8)) calc(env(safe-area-inset-left) + theme(spacing.8));}
-  .container-sa-9 {padding: calc(env(safe-area-inset-top) + theme(spacing.9)) calc(env(safe-area-inset-right) + theme(spacing.9)) calc(env(safe-area-inset-bottom) + theme(spacing.9)) calc(env(safe-area-inset-left) + theme(spacing.9));}
-  .container-sa-10 {padding: calc(env(safe-area-inset-top) + theme(spacing.10)) calc(env(safe-area-inset-right) + theme(spacing.10)) calc(env(safe-area-inset-bottom) + theme(spacing.10)) calc(env(safe-area-inset-left) + theme(spacing.10));}
-  .container-sa-11 {padding: calc(env(safe-area-inset-top) + theme(spacing.11)) calc(env(safe-area-inset-right) + theme(spacing.11)) calc(env(safe-area-inset-bottom) + theme(spacing.11)) calc(env(safe-area-inset-left) + theme(spacing.11));}
-  .container-sa-12 {padding: calc(env(safe-area-inset-top) + theme(spacing.12)) calc(env(safe-area-inset-right) + theme(spacing.12)) calc(env(safe-area-inset-bottom) + theme(spacing.12)) calc(env(safe-area-inset-left) + theme(spacing.12));}
-  .container-sa-14 {padding: calc(env(safe-area-inset-top) + theme(spacing.14)) calc(env(safe-area-inset-right) + theme(spacing.14)) calc(env(safe-area-inset-bottom) + theme(spacing.14)) calc(env(safe-area-inset-left) + theme(spacing.14));}
-  .container-sa-16 {padding: calc(env(safe-area-inset-top) + theme(spacing.16)) calc(env(safe-area-inset-right) + theme(spacing.16)) calc(env(safe-area-inset-bottom) + theme(spacing.16)) calc(env(safe-area-inset-left) + theme(spacing.16));}
-  .container-sa-20 {padding: calc(env(safe-area-inset-top) + theme(spacing.20)) calc(env(safe-area-inset-right) + theme(spacing.20)) calc(env(safe-area-inset-bottom) + theme(spacing.20)) calc(env(safe-area-inset-left) + theme(spacing.20));}
-  .container-sa-24 {padding: calc(env(safe-area-inset-top) + theme(spacing.24)) calc(env(safe-area-inset-right) + theme(spacing.24)) calc(env(safe-area-inset-bottom) + theme(spacing.24)) calc(env(safe-area-inset-left) + theme(spacing.24));}
-  .container-sa-28 {padding: calc(env(safe-area-inset-top) + theme(spacing.28)) calc(env(safe-area-inset-right) + theme(spacing.28)) calc(env(safe-area-inset-bottom) + theme(spacing.28)) calc(env(safe-area-inset-left) + theme(spacing.28));}
-  .container-sa-32 {padding: calc(env(safe-area-inset-top) + theme(spacing.32)) calc(env(safe-area-inset-right) + theme(spacing.32)) calc(env(safe-area-inset-bottom) + theme(spacing.32)) calc(env(safe-area-inset-left) + theme(spacing.32));}
-  .container-sa-36 {padding: calc(env(safe-area-inset-top) + theme(spacing.36)) calc(env(safe-area-inset-right) + theme(spacing.36)) calc(env(safe-area-inset-bottom) + theme(spacing.36)) calc(env(safe-area-inset-left) + theme(spacing.36));}
-  .container-sa-40 {padding: calc(env(safe-area-inset-top) + theme(spacing.40)) calc(env(safe-area-inset-right) + theme(spacing.40)) calc(env(safe-area-inset-bottom) + theme(spacing.40)) calc(env(safe-area-inset-left) + theme(spacing.40));}
-  .container-sa-44 {padding: calc(env(safe-area-inset-top) + theme(spacing.44)) calc(env(safe-area-inset-right) + theme(spacing.44)) calc(env(safe-area-inset-bottom) + theme(spacing.44)) calc(env(safe-area-inset-left) + theme(spacing.44));}
-  .container-sa-48 {padding: calc(env(safe-area-inset-top) + theme(spacing.48)) calc(env(safe-area-inset-right) + theme(spacing.48)) calc(env(safe-area-inset-bottom) + theme(spacing.48)) calc(env(safe-area-inset-left) + theme(spacing.48));}
-  .container-sa-52 {padding: calc(env(safe-area-inset-top) + theme(spacing.52)) calc(env(safe-area-inset-right) + theme(spacing.52)) calc(env(safe-area-inset-bottom) + theme(spacing.52)) calc(env(safe-area-inset-left) + theme(spacing.52));}
-  .container-sa-56 {padding: calc(env(safe-area-inset-top) + theme(spacing.56)) calc(env(safe-area-inset-right) + theme(spacing.56)) calc(env(safe-area-inset-bottom) + theme(spacing.56)) calc(env(safe-area-inset-left) + theme(spacing.56));}
-  .container-sa-60 {padding: calc(env(safe-area-inset-top) + theme(spacing.60)) calc(env(safe-area-inset-right) + theme(spacing.60)) calc(env(safe-area-inset-bottom) + theme(spacing.60)) calc(env(safe-area-inset-left) + theme(spacing.60));}
-  .container-sa-64 {padding: calc(env(safe-area-inset-top) + theme(spacing.64)) calc(env(safe-area-inset-right) + theme(spacing.64)) calc(env(safe-area-inset-bottom) + theme(spacing.64)) calc(env(safe-area-inset-left) + theme(spacing.64));}
-  .container-sa-72 {padding: calc(env(safe-area-inset-top) + theme(spacing.72)) calc(env(safe-area-inset-right) + theme(spacing.72)) calc(env(safe-area-inset-bottom) + theme(spacing.72)) calc(env(safe-area-inset-left) + theme(spacing.72));}
-  .container-sa-80 {padding: calc(env(safe-area-inset-top) + theme(spacing.80)) calc(env(safe-area-inset-right) + theme(spacing.80)) calc(env(safe-area-inset-bottom) + theme(spacing.80)) calc(env(safe-area-inset-left) + theme(spacing.80));}
-  .container-sa-96 {padding: calc(env(safe-area-inset-top) + theme(spacing.96)) calc(env(safe-area-inset-right) + theme(spacing.96)) calc(env(safe-area-inset-bottom) + theme(spacing.96)) calc(env(safe-area-inset-left) + theme(spacing.96));} */
+  .force-italic {
+    @apply -skew-x-12 inline-block;
+  }
 }

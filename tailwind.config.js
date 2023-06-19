@@ -15,6 +15,8 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        'Noto Sans JP Variable',
+        'Noto Sans JP',
         'ui-sans-serif',
         'sans-serif',
       ],

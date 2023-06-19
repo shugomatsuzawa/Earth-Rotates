@@ -9,9 +9,9 @@ const Earth = () => {
 
   return (
     <>
-      <Script src="https://www.webglearth.com/v2/api.js" />
+      <Script src="https://www.webglearth.com/v2/api.js" strategy="beforeInteractive" />
       <Script src="/webglearth.js" onLoad={() => { initialize() }} />
-      <div id="earth_div" className='!fixed inset-0 -z-10 mix-blend-lighten opacity-60 contrast-more:opacity-20'></div>
+      <div id="earth_div" inert className='!fixed inset-0 -z-10 mix-blend-lighten opacity-60 contrast-more:opacity-20'></div>
     </>
   );
 };
