@@ -1,0 +1,3 @@
+[submodule "public/webglearth2-offline"]
+	path = public/webglearth2-offline
+	url = https://github.com/webglearth/webglearth2-offline.git

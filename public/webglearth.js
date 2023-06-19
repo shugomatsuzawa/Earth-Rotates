@@ -1,5 +1,6 @@
 var earth;
 
+// window.onload = initialize;
 function initialize() {
   const reducedMotion = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
 
@@ -42,14 +43,14 @@ function initialize() {
     const windowHeight = mainScroll.clientHeight;
     if (!reducedMotion && scroll < windowHeight){
       const zoomParam = 2 + scroll / windowHeight * 2;
-      const tiltParam = scroll / windowHeight * 30;
+      const tiltParam = scroll / windowHeight * 45;
       earth.setZoom(zoomParam);
       earth.setTilt(tiltParam);
       // earth.setRoll(25);
       // console.debug('zoom' + zoomParam + 'tilt' + tiltParam);
     } else if (!reducedMotion) {
       earth.setZoom(4);
-      earth.setTilt(30);
+      earth.setTilt(45);
       // earth.setRoll(25);
     }
   });
