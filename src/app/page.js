@@ -47,7 +47,7 @@ export default function Home() {
             <ul>
               <li className='inline-block mx-2'><Link href='https://shugomatsuzawa.com' target='_blank'>このサイトを<ruby>作<rp>(</rp><rt>つく</rt><rp>)</rp></ruby>った<ruby>人<rp>(</rp><rt>ひと</rt><rp>)</rp></ruby> <FontAwesomeIcon icon={faSquareArrowUpRight} size="sm" /></Link></li>
               <li className='inline-block mx-2'><Link href='https://shugomatsuzawa.com/privacy/' target='_blank'>プライバシーポリシー <FontAwesomeIcon icon={faSquareArrowUpRight} size="sm" /></Link></li>
-              {/* <li className='inline-block mx-2'><Link href='#' target='_blank'>謝辞</Link></li> */}
+              <li className='inline-block mx-2'><Link href='/acknowledgements.txt'>謝辞</Link></li>
             </ul>
             <small className='block mt-2'>©︎ Shugo Matsuzawa 2023</small>
           </aside>
