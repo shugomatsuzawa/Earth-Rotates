@@ -1,7 +1,4 @@
-import Image from 'next/image'
-import styles from './page.module.css'
 import Link from "next/link";
-import Script from 'next/script'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown, faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons'
@@ -13,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Earth />
-      <main id='main-scroll' className={`${styles.main} h-[100dvh] overflow-y-auto snap-y snap-mandatory`}>
+      <main id='main-scroll' className='h-[100dvh] overflow-y-auto snap-y snap-mandatory'>
         <section className='container p-10 h-[100dvh] snap-start grid place-content-center'>
           <h1 className='leading-loose'><span className='force-italic'><ruby>何時<rp>(</rp><rt>なんじ</rt><rp>)</rp></ruby>？</span><span className='force-italic'><ruby>何分<rp>(</rp><rt>なんふん</rt><rp>)</rp></ruby>？</span><span className='force-italic'><ruby>何秒<rp>(</rp><rt>なんびょう</rt><rp>)</rp></ruby>？</span><br />
           <span className='force-italic'><ruby>地球<rp>(</rp><rt>ちきゅう</rt><rp>)</rp></ruby>が</span><span className='force-italic'><ruby>何回<rp>(</rp><rt>なんかい</rt><rp>)</rp></ruby></span><span className='force-italic'><ruby>回<rp>(</rp><rt>まわ</rt><rp>)</rp></ruby>った</span><span className='force-italic'>とき？</span></h1>
@@ -47,7 +44,7 @@ export default function Home() {
             <ul>
               <li className='inline-block mx-2'><Link href='https://shugomatsuzawa.com' target='_blank'>このサイトを<ruby>作<rp>(</rp><rt>つく</rt><rp>)</rp></ruby>った<ruby>人<rp>(</rp><rt>ひと</rt><rp>)</rp></ruby> <FontAwesomeIcon icon={faSquareArrowUpRight} size="sm" /></Link></li>
               <li className='inline-block mx-2'><Link href='https://shugomatsuzawa.com/privacy/' target='_blank'>プライバシーポリシー <FontAwesomeIcon icon={faSquareArrowUpRight} size="sm" /></Link></li>
-              <li className='inline-block mx-2'><Link href='/acknowledgements.txt'>謝辞</Link></li>
+              <li className='inline-block mx-2'><a href='/acknowledgements.txt'>謝辞</a></li>
             </ul>
             <small className='block mt-2'>©︎ Shugo Matsuzawa 2023</small>
           </aside>

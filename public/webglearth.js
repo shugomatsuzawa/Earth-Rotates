@@ -11,7 +11,7 @@ function initialize() {
     scrollWheelZoom: false
   });
   earth.setView([27, 136], 2);
-  WE.tileLayer('https://webglearth.github.io/webglearth2-offline/{z}/{x}/{y}.jpg', {
+  WE.tileLayer('/webglearth2-offline/{z}/{x}/{y}.jpg', {
     tileSize: 256,
     bounds: [[-85, -180], [85, 180]],
     minZoom: 0,

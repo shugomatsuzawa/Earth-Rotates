@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "何時？何分？何秒？地球が何回回った時？",
+  "short_name": "地球が何回回った時？",
+  "start_url": "/?utm_source=pwa",
+  "display": "standalone",
+  "background_color": "#0b4870",
+  "description": "地球が何回回ったのかがわかるアプリ",
+  "icons": [{
+    "src": "/apple-icon.png",
+    "sizes": "180x180",
+    "type": "image/png"
+  }]
+}

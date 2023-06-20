@@ -1,8 +1,6 @@
 'use client';
-import Image from 'next/image'
-import styles from './page.module.css'
-import Link from "next/link";
-import { useState, useEffect, cache } from 'react';
+
+import { useState, useEffect } from 'react';
 
 const Rotates = () => {
   // https://ordix.hatenablog.jp/entry/2016/06/09/201057
